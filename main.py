@@ -52,7 +52,7 @@ with open(budget_csv, 'r') as csv_file:
     #Print out all necessary information
     print('Financial Analysis')
     print('-------------------------------------------')
-    print(f'Total Months: ${nrow}')
+    print(f'Total Months: {nrow}')
     print(f'Net Profit/Loss: ${profloss}')
     print(f'Average Change: ${round(change_average,2)}')
     print(f'Greatest Increase in Profits: {max_name} (${maxv})')
