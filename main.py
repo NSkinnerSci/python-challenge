@@ -27,6 +27,7 @@ with open(budget_csv, 'r') as csv_file:
     
     #Search each row for data
     for row in csvreader:
+        #collect data
         row[1] = int(row[1])
         nrow = nrow + 1
         profloss = row[1] + profloss
@@ -45,7 +46,7 @@ with open(budget_csv, 'r') as csv_file:
         #redefine the last value
         last_val = row[1]
         
-
+    #Calculate the average change
     change_average = change_total / (nrow-1)
     
     #Print out all necessary information
@@ -57,7 +58,7 @@ with open(budget_csv, 'r') as csv_file:
     print(f'Greatest Increase in Profits: {max_name} (${maxv})')
     print(f'Greatest Decrease in Profits: {min_name} (${minv})')
     
-    
+    #write the analysis to txt file
     with open('analysis/financial_analysis.txt', 'w') as f:
         f.write('Financial Analysis\n')
         f.write('-------------------------------------------\n')
@@ -67,9 +68,10 @@ with open(budget_csv, 'r') as csv_file:
         f.write(f'Greatest Increase in Profits: {max_name} (${maxv})\n')
         f.write(f'Greatest Decrease in Profits: {min_name} (${minv})\n')
     
-    
+#Print some empty lines to make it look cleaner
 print('\n')
-print('\n')    
+print('\n') 
+   
 ### PyPoll ###
 
 election_csv = os.path.join('Resources', 'election_data.csv')
