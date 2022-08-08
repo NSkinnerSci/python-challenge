@@ -116,7 +116,7 @@ with open(election_csv, 'r') as csv_file:
     print("------------------------------------------")
     #zip up the results table and run a single print statement for each candidate
     for i in zip(candidate, nvote, percent_vote):
-        print(f"{i[0]}: {i[2]} ({i[1]})")
+        print(f"{i[0]}: {i[2]}% ({i[1]})")
     print("------------------------------------------")
     print(f"Winner: {winner}")
     
@@ -127,7 +127,7 @@ with open(election_csv, 'r') as csv_file:
         f.write(f"Total Votes: {nrow}\n")
         f.write("------------------------------------------\n")
         for i in zip(candidate, nvote, percent_vote):
-            f.write(f"{i[0]}: {i[2]} ({i[1]})\n")
+            f.write(f"{i[0]}: {i[2]}% ({i[1]})\n")
         f.write("------------------------------------------\n")
         f.write(f"Winner: {winner}\n")
 
