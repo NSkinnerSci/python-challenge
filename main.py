@@ -62,7 +62,7 @@ with open(budget_csv, 'r') as csv_file:
     with open('analysis/financial_analysis.txt', 'w') as f:
         f.write('Financial Analysis\n')
         f.write('-------------------------------------------\n')
-        f.write(f'Total Months: ${nrow}\n')
+        f.write(f'Total Months: {nrow}\n')
         f.write(f'Net Profit/Loss: ${profloss}\n')
         f.write(f'Average Change: ${round(change_average,2)}\n')
         f.write(f'Greatest Increase in Profits: {max_name} (${maxv})\n')
